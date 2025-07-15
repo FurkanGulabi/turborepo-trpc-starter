@@ -1,3 +1,4 @@
+import { prisma } from "@repo/db";
 import { z } from "zod";
 import { publicProcedure, router } from "../trpc";
 
@@ -10,6 +11,6 @@ export const exampleRouter = router({
       };
     }),
   getAll: publicProcedure.query(() => {
-    return 1;
+    return prisma.user.count();
   }),
 });
