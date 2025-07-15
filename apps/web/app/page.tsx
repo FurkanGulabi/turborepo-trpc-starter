@@ -1,6 +1,6 @@
 "use client";
-import React from 'react';
-import { trpc } from '../trpc/react';
+import React from "react";
+import { trpc } from "../trpc/react";
 const Homepage = () => {
   const { data, isLoading } = trpc.example.getAll.useQuery();
   return (
@@ -8,7 +8,7 @@ const Homepage = () => {
       <div>TRPC setup</div>
       <div>Data: {isLoading ? "Loading..." : JSON.stringify(data)}</div>
     </div>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;

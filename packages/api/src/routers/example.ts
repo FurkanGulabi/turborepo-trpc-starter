@@ -9,7 +9,7 @@ export const exampleRouter = router({
         greeting: `Hello ${input.text}`,
       };
     }),
-  getAll: publicProcedure.query(({ ctx }) => {
+  getAll: publicProcedure.query(() => {
     return 1;
   }),
 });
